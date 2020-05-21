@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [LoginTestSuites]">
+  <test thread-count="5" name="PositiveTest(failed)">
+    <groups>
+      <run>
+        <include name="positiveTests"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.samplesite.logintest.LoginTests">
+        <methods>
+          <include name="tearDown"/>
+          <include name="PositiveLoginTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.samplesite.logintest.LoginTests -->
+    </classes>
+  </test> <!-- PositiveTest(failed) -->
+  <test thread-count="5" name="NegativeUsernameTest(failed)">
+    <parameter name="password" value="SuperSecretPassword!"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="expectedMessage" value="Your username is invalid!"/>
+    <parameter name="username" value="fcsfddbkl"/>
+    <classes>
+      <class name="com.samplesite.logintest.LoginTests">
+        <methods>
+          <include name="tearDown"/>
+          <include name="negativeLoginTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.samplesite.logintest.LoginTests -->
+    </classes>
+  </test> <!-- NegativeUsernameTest(failed) -->
+  <test thread-count="5" name="NegativePasswordTest(failed)">
+    <parameter name="password" value="incorrectPassword!"/>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="expectedMessage" value="Your password is invalid!"/>
+    <parameter name="username" value="tomsmith"/>
+    <classes>
+      <class name="com.samplesite.logintest.LoginTests">
+        <methods>
+          <include name="tearDown"/>
+          <include name="negativeLoginTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.samplesite.logintest.LoginTests -->
+    </classes>
+  </test> <!-- NegativePasswordTest(failed) -->
+</suite> <!-- Failed suite [LoginTestSuites] -->

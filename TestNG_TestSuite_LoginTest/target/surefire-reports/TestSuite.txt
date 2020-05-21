@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 6, Errors: 0, Skipped: 3, Time elapsed: 0.815 s <<< FAILURE! - in TestSuite
+com.samplesite.logintest.LoginTests.setUp  Time elapsed: 0.561 s  <<< FAILURE!
+java.lang.NoSuchMethodError: com.google.common.base.Preconditions.checkState(ZLjava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+	at com.samplesite.logintest.LoginTests.setUp(LoginTests.java:26)
+
+com.samplesite.logintest.LoginTests.tearDown  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.samplesite.logintest.LoginTests.tearDown(LoginTests.java:144)
+
+com.samplesite.logintest.LoginTests.setUp  Time elapsed: 0.047 s  <<< FAILURE!
+java.lang.NoSuchMethodError: com.google.common.base.Preconditions.checkState(ZLjava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+	at com.samplesite.logintest.LoginTests.setUp(LoginTests.java:26)
+
+com.samplesite.logintest.LoginTests.tearDown  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.samplesite.logintest.LoginTests.tearDown(LoginTests.java:144)
+
+com.samplesite.logintest.LoginTests.setUp  Time elapsed: 0.063 s  <<< FAILURE!
+java.lang.NoSuchMethodError: com.google.common.base.Preconditions.checkState(ZLjava/lang/String;Ljava/lang/Object;)V
+	at com.samplesite.logintest.LoginTests.setUp(LoginTests.java:31)
+
+com.samplesite.logintest.LoginTests.tearDown  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.samplesite.logintest.LoginTests.tearDown(LoginTests.java:144)
+

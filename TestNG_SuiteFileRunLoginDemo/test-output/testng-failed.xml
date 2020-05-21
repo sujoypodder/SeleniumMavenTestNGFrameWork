@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [loginSuite]">
+  <test thread-count="5" name="positiveTest(failed)">
+    <classes>
+      <class name="ucam.uap.bd.edu.LoginAutoTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="positiveTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- ucam.uap.bd.edu.LoginAutoTest -->
+    </classes>
+  </test> <!-- positiveTest(failed) -->
+  <test thread-count="5" name="negativeIDTest(failed)">
+    <parameter name="expectedermsg" value="Invalid Login-ID, Enter valid Login-ID"/>
+    <parameter name="password" value="15201128"/>
+    <parameter name="loginid" value="75201128"/>
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="ucam.uap.bd.edu.LoginAutoTest">
+        <methods>
+          <include name="negativeTest" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- ucam.uap.bd.edu.LoginAutoTest -->
+    </classes>
+  </test> <!-- negativeIDTest(failed) -->
+  <test thread-count="5" name="negativePassTest(failed)">
+    <parameter name="expectedermsg" value="Invalid password, try again..."/>
+    <parameter name="password" value="15201100"/>
+    <parameter name="loginid" value="15201128"/>
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="ucam.uap.bd.edu.LoginAutoTest">
+        <methods>
+          <include name="negativeTest" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- ucam.uap.bd.edu.LoginAutoTest -->
+    </classes>
+  </test> <!-- negativePassTest(failed) -->
+  <test thread-count="5" name="negativeIDPassTest(failed)">
+    <parameter name="expectedermsg" value="Invalid Login-ID, Enter valid Login-ID"/>
+    <parameter name="password" value="1456236"/>
+    <parameter name="loginid" value="75201128"/>
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="ucam.uap.bd.edu.LoginAutoTest">
+        <methods>
+          <include name="negativeTest" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- ucam.uap.bd.edu.LoginAutoTest -->
+    </classes>
+  </test> <!-- negativeIDPassTest(failed) -->
+</suite> <!-- Failed suite [loginSuite] -->

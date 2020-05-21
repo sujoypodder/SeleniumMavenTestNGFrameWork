@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="loginSuite">
+	<test name="positiveTest">
+		<!-- <parameter name="browser" value="chrome" /> -->
+		<!-- <parameter name="browser" value="firefox" /> -->
+		<classes>
+			<class name="ucam.uap.bd.edu.LoginAutoTest">
+				<methods>
+					<include name="positiveTest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="negativeIDTest">
+		<parameter name="browser" value="chrome" />
+		<parameter name="loginid" value="75201128" />
+		<parameter name="password" value="15201128" />
+		<parameter name="expectedermsg"
+			value="Invalid Login-ID, Enter valid Login-ID" />
+		<classes>
+			<class name="ucam.uap.bd.edu.LoginAutoTest">
+				<methods>
+					<include name="negativeTest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="negativePassTest">
+		<parameter name="browser" value="chrome" />
+		<parameter name="loginid" value="15201128" />
+		<parameter name="password" value="15201100" />
+		<parameter name="expectedermsg"
+			value="Invalid password, try again..." />
+		<classes>
+			<class name="ucam.uap.bd.edu.LoginAutoTest">
+				<methods>
+					<include name="negativeTest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="negativeIDPassTest">
+		<parameter name="browser" value="chrome" />
+		<parameter name="loginid" value="75201128" />
+		<parameter name="password" value="1456236" />
+		<parameter name="expectedermsg"
+			value="Invalid Login-ID, Enter valid Login-ID" />
+		<classes>
+			<class name="ucam.uap.bd.edu.LoginAutoTest">
+				<methods>
+					<include name="negativeTest" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite> <!-- loginSuite -->
